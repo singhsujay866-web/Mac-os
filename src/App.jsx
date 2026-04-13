@@ -5,7 +5,7 @@ import Background from './components/Background'
 import Nav from './components/Nav'
 import Dock from './components/Dock'
 import MacWindows from './components/Windows/MacWindows'
-import Github from './components/Windows/github'
+import Github from './components/Windows/Github'
 import Loading from './components/Loading'
 
 const App = () => {
