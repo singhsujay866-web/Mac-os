@@ -1,0 +1,41 @@
+.fullscreen-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+
+    // Default state mein icon thoda subtle dikhega
+    .fullscreen-icon {
+        width: 1.1rem;
+        height: 1.1rem;
+        filter: brightness(0) invert(1); // Isse icon pure white ho jayega
+        opacity: 0.8;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15); // Glass effect
+        
+        .fullscreen-icon {
+            opacity: 1;
+            transform: scale(1.15); // Hover par halka sa zoom
+        }
+    }
+
+    &:active {
+        transform: scale(0.9); // Click karne par dabne wala effect
+    }
+
+    // Jab fullscreen active ho
+    &.active {
+        .fullscreen-icon {
+            transform: rotate(180deg); // Exit mode ke liye rotation animation
+        }
+    }
+}
