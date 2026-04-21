@@ -2,9 +2,9 @@ import React from 'react'
 import MacWindows from './MacWindows'
 import Terminal from 'react-console-emulator'
 import "./cli.scss"
-const Cli = () => {
+const Cli = ({windowsName,setwindowsState}) => {
     return (
-        <MacWindows>
+        <MacWindows windowsName={windowsName} setwindowsState={setwindowsState}>
             <div className="cli-window">
                 <Terminal
                     commands={{

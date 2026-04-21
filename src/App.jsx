@@ -16,25 +16,33 @@ const App = () => {
   const [themeIndex, setThemeIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const currentTheme = themes[themeIndex];
+  const [windowsState, setwindowsState] = useState({
+    github: false,
+    note: false,
+    resume: false,
+    spotify: false,
+    cli: false
+  })
 
   const toggleTheme = () => {
     setThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
   };
+  if (isLoading) return <Loading onDone={() => setIsLoading(false)} />;
 
-   if (isLoading) return <Loading onDone={() => setIsLoading(false)} />;
-
+  
 
   return (
-   <main>
-    <Background theme={currentTheme} />
-    <Nav onLogoClick={toggleTheme} />
-    <Dock />
-    <Github />
-    <Note />
-    <Resume />
-    <Spotify />
-    <Cli />
-   </main>
+    <main>
+      <Background theme={currentTheme} />
+      <Nav onLogoClick={toggleTheme} />
+      <Dock windowsState={windowsState} setwindowsState={setwindowsState} />
+      {windowsState.github && <Github windowsName="github" setwindowsState={setwindowsState} />}
+      {windowsState.note && <Note windowsName="note" setwindowsState={setwindowsState} />}
+      {windowsState.resume && <Resume windowsName="resume" setwindowsState={setwindowsState} />}
+      {windowsState.spotify && <Spotify windowsName="spotify" setwindowsState={setwindowsState} />}
+      {windowsState.cli && <Cli windowsName="cli" setwindowsState={setwindowsState} />}
+
+    </main>
   )
 }
 
