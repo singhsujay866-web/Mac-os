@@ -1,0 +1,111 @@
+/**
+ * @file: profile.config.ts
+ * @author: Sujay Singh
+ * @summary: A performance-driven frontend engineer.
+ */
+
+// --------------------------------------------------
+// 1. CORE DEPENDENCIES & SKILLS
+// --------------------------------------------------
+
+const TECH_STACK = {
+  frontend: [
+    "React.js",        // 90%
+    "JavaScript (ES6+)", // 90%
+    "TailwindCSS",     // 85%
+    "SCSS (Sass)",     // 80%
+  ],
+  backend: [
+    "Node.js",         // 50%
+    "REST APIs",       // 85%
+  ],
+  tools: ["Git", "GitHub", "Vercel", "Vite", "npm"]
+};
+
+// --------------------------------------------------
+// 2. EXPERIENCE LOG (Reverse Chronological)
+// --------------------------------------------------
+
+class ProfessionalHistory {
+  
+  /** * INTERNSHIP ROLE
+   * @period Dec 2025 - Mar 2026 
+   */
+  public async Motherson_Group(): Promise<Impact> {
+    const role = "ADAS Data Annotator Intern";
+    
+    // Key Contributions
+    const annotation = "High-precision data labeling for ADAS systems";
+    const accuracy = "Maintained dataset quality for AI training";
+    
+    const learning = this.gain([
+      "Computer Vision Workflow",
+      "Data Annotation",
+      "Attention to Detail"
+    ]);
+    
+    const exposure = "Real-world AI pipeline exposure";
+    
+    return { role, annotation, accuracy, learning, exposure };
+  }
+
+  /** * PROJECT EXPERIENCE
+   * @period 2023 - Present
+   */
+  public Projects(): void {
+    this.role = "Frontend Developer";
+    this.focus = "Building scalable UI & API-driven apps";
+    
+    // Built SHOPLY (E-commerce app with React + Tailwind)
+    // Implemented Context API (no prop drilling)
+    // Created dynamic filtering, sorting & routing
+    
+    // Built Progress Dashboard (Weather, Timer, Tasks)
+    // Integrated APIs & async data handling
+  }
+}
+
+// --------------------------------------------------
+// 3. PROJECT HIGHLIGHTS
+// --------------------------------------------------
+
+interface Project {
+  name: string;
+  stack: string;
+}
+
+const projects: Project[] = [
+  {
+    name: "SHOPLY - Modern E-commerce Frontend",
+    stack: "React.js, Tailwind CSS, Context API, Axios"
+  },
+  {
+    name: "Progress Management Dashboard",
+    stack: "HTML, CSS, JavaScript, REST APIs"
+  }
+];
+
+// --------------------------------------------------
+// 4. ACADEMIC BACKGROUND
+// --------------------------------------------------
+
+const education = new Map<string, string>([
+  ["Delhi Skill and Entrepreneurship University", "BCA (2023 - 2026)"]
+]);
+
+// --------------------------------------------------
+// 5. STATUS
+// --------------------------------------------------
+
+/**
+ * TERMINAL OUTPUT
+ * ---------------------------------------
+ * $ user --status
+ * > Role: Frontend Developer (React)
+ * > Status: Open to Opportunities
+ * > Location: Delhi / Remote
+ * > Loading Assets... [||||||||||] 100%
+ * > Ready.
+ */
+
+export default new ProfessionalHistory();

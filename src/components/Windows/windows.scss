@@ -6,6 +6,7 @@
     overflow: hidden;
     color: white;
     .nav{
+        flex-shrink: 0;
         display: flex;
         align-items: center;
         gap: 1.5rem;
@@ -40,5 +41,15 @@
     }
     .main-content{
         height: 100%;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    *::-webkit-scrollbar{
+        width: 5px;
+    }
+    *::-webkit-scrollbar-thumb{
+        background-color: gray;
+        border-radius: 4px;
     }
 }
