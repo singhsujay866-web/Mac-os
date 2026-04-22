@@ -34,7 +34,7 @@ const App = () => {
   return (
     <main>
       <Background theme={currentTheme} />
-      <Nav onLogoClick={toggleTheme} />
+      <Nav onLogoClick={toggleTheme} windowsName="cli" setwindowsState={setwindowsState} />
       <Dock windowsState={windowsState} setwindowsState={setwindowsState} />
       {windowsState.github && <Github windowsName="github" setwindowsState={setwindowsState} />}
       {windowsState.note && <Note windowsName="note" setwindowsState={setwindowsState} />}
